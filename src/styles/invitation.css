@@ -1,0 +1,336 @@
+.wedding-card {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card-container {
+  background: linear-gradient(135deg, #f8f6f3 0%, #f0ead6 100%);
+  border: 2px solid var(--gold-accent);
+  border-radius: 15px;
+  padding: 60px 40px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(212, 175, 55, 0.1);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.card-container:hover {
+  box-shadow: 0 25px 50px rgba(212, 175, 55, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Decorative borders */
+.decorative-border {
+  height: 3px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    var(--gold-accent) 20%, 
+    var(--gold-light) 50%, 
+    var(--gold-accent) 80%, 
+    transparent 100%);
+  margin: 30px 0;
+  position: relative;
+}
+
+.decorative-border::before {
+  content: '❦';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--primary-color);
+  color: var(--gold-accent);
+  padding: 0 10px;
+  font-size: 18px;
+}
+
+/* Guest name */
+.guest-name {
+  font-family: var(--font-secondary);
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: var(--gold-accent);
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.guest-name:hover {
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+  transform: scale(1.02);
+}
+
+/* Invitation subtitle */
+.invitation-subtitle {
+  font-family: var(--font-secondary);
+  font-size: 1.4rem;
+  color: var(--text-medium);
+  margin-bottom: 30px;
+  font-style: italic;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.invitation-subtitle:hover {
+  color: var(--gold-accent);
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+/* Couple names */
+.couple-names {
+  margin: 40px 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.bride-name, .groom-name {
+  font-family: var(--font-secondary);
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0;
+  line-height: 1.2;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.bride-name:hover, .groom-name:hover {
+  color: var(--gold-accent);
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+  transform: translateY(-1px);
+}
+
+.ampersand {
+  font-family: var(--font-secondary);
+  font-size: 2.5rem;
+  color: var(--gold-accent);
+  font-weight: 400;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.ampersand:hover {
+  text-shadow: 0 0 25px rgba(212, 175, 55, 0.8);
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Invitation text */
+.invitation-text {
+  margin: 40px 0;
+  line-height: 1.8;
+}
+
+.invitation-line {
+  font-size: 1.3rem;
+  color: var(--text-medium);
+  margin: 8px 0;
+  font-weight: 400;
+}
+
+/* Date and time */
+.datetime {
+  margin: 40px 0;
+  padding: 25px;
+  background: rgba(212, 175, 55, 0.05);
+  border: 1px solid var(--gold-light);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.datetime:hover {
+  background: rgba(212, 175, 55, 0.1);
+  border-color: var(--gold-accent);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);
+  transform: translateY(-2px);
+}
+
+.date {
+  font-family: var(--font-secondary);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--gold-accent);
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.datetime:hover .date {
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.time {
+  font-size: 1.4rem;
+  color: var(--text-medium);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.datetime:hover .time {
+  color: var(--text-dark);
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+/* Decorative divider */
+.decorative-divider {
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    var(--gold-accent) 50%, 
+    transparent 100%);
+  margin: 40px 0;
+  position: relative;
+}
+
+.decorative-divider::before,
+.decorative-divider::after {
+  content: '✦';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gold-accent);
+  font-size: 16px;
+}
+
+.decorative-divider::before {
+  left: 30%;
+}
+
+.decorative-divider::after {
+  right: 30%;
+}
+
+/* Venue */
+.venue {
+  margin: 40px 0;
+  padding: 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.venue:hover {
+  background: rgba(212, 175, 55, 0.03);
+  transform: translateY(-1px);
+}
+
+.venue h3 {
+  font-family: var(--font-secondary);
+  font-size: 1.6rem;
+  color: var(--gold-accent);
+  margin-bottom: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.venue:hover h3 {
+  text-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
+}
+
+.venue p {
+  font-size: 1.2rem;
+  color: var(--text-medium);
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+.venue:hover p {
+  color: var(--text-dark);
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.2);
+}
+
+/* Closing */
+.closing {
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 1px solid var(--gold-light);
+}
+
+.closing p {
+  font-family: var(--font-secondary);
+  font-size: 1.1rem;
+  color: var(--text-medium);
+  font-style: italic;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .card-container {
+    padding: 40px 25px;
+    margin: 10px;
+  }
+  
+  .guest-name {
+    font-size: 1.8rem;
+  }
+  
+  .invitation-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .bride-name, .groom-name {
+    font-size: 2.2rem;
+  }
+  
+  .ampersand {
+    font-size: 2rem;
+  }
+  
+  .invitation-line {
+    font-size: 1.1rem;
+  }
+  
+  .date {
+    font-size: 1.5rem;
+  }
+  
+  .time {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .wedding-card {
+    padding: 10px;
+  }
+  
+  .card-container {
+    padding: 30px 20px;
+  }
+  
+  .guest-name {
+    font-size: 1.6rem;
+  }
+  
+  .invitation-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .bride-name, .groom-name {
+    font-size: 1.9rem;
+  }
+  
+  .ampersand {
+    font-size: 1.7rem;
+  }
+  
+  .invitation-line {
+    font-size: 1rem;
+  }
+  
+  .date {
+    font-size: 1.3rem;
+  }
+  
+  .time {
+    font-size: 1.1rem;
+  }
+  
+  .venue p {
+    font-size: 1.1rem;
+  }
+}

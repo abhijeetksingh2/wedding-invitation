@@ -1,0 +1,74 @@
+.particle-system {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  font-size: var(--size);
+  left: var(--left);
+  top: -50px;
+  opacity: 0.7;
+  animation: float-particle var(--duration) linear infinite;
+  animation-delay: var(--delay);
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.particle-heart {
+  color: rgba(255, 182, 193, 0.6); /* Light pink */
+  filter: drop-shadow(0 0 3px rgba(255, 182, 193, 0.3));
+}
+
+.particle-flower {
+  color: rgba(212, 175, 55, 0.5); /* Gold */
+  filter: drop-shadow(0 0 3px rgba(212, 175, 55, 0.3));
+}
+
+.particle-sparkle {
+  color: rgba(255, 215, 0, 0.6); /* Gold sparkle */
+  filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.4));
+}
+
+@keyframes float-particle {
+  0% {
+    top: -50px;
+    transform: translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  
+  10% {
+    opacity: 0.7;
+  }
+  
+  90% {
+    opacity: 0.7;
+  }
+  
+  100% {
+    top: calc(100vh + 50px);
+    transform: translateX(30px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .particle {
+    animation: none;
+    opacity: 0.3;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .particle {
+    opacity: 0.5;
+  }
+}
