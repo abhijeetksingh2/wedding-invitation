@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Invitation",
+  "name": "Wedding-Invitation",
   "icons": [
     {
       "src": "favicon.ico",
@@ -17,6 +17,12 @@
       "type": "image/png",
       "sizes": "512x512"
     }
+    {
+   "src": "\/android-icon-96x96.png",
+   "sizes": "96x96",
+   "type": "image\/png",
+   "density": "2.0"
+  },
   ],
   "start_url": ".",
   "display": "standalone",
