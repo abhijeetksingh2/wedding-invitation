@@ -197,6 +197,38 @@ export const decorativeBorderVariants: Variants = {
   }
 };
 
+// Ganesh-Ji image variants
+export const ganeshImageVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    scale: 0.3,
+    rotate: -10,
+    y: -50,
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    rotate: 0,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 120,
+      damping: 20,
+      delay: 0.1,
+      duration: 1.2,
+    }
+  },
+  hover: {
+    scale: 1.05,
+    rotate: 2,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+      damping: 15,
+    }
+  }
+};
+
 // Container stagger variants
 export const containerVariants: Variants = {
   hidden: { opacity: 0 },

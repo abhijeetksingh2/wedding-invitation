@@ -21,6 +21,39 @@
   transform: translateY(-2px);
 }
 
+/* Ganesh-Ji Image Styling */
+.ganesh-ji-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.ganesh-ji-image {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 16px rgba(212, 175, 55, 0.3));
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 246, 243, 0.9));
+  padding: 10px;
+  box-shadow: 
+    0 0 20px rgba(212, 175, 55, 0.2),
+    0 4px 12px rgba(212, 175, 55, 0.15),
+    inset 0 0 10px rgba(212, 175, 55, 0.1);
+}
+
+.ganesh-ji-image:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 12px 24px rgba(212, 175, 55, 0.4));
+  box-shadow: 
+    0 0 30px rgba(212, 175, 55, 0.3),
+    0 6px 16px rgba(212, 175, 55, 0.2),
+    inset 0 0 15px rgba(212, 175, 55, 0.15);
+}
+
 /* Decorative borders */
 .decorative-border {
   height: 3px;
@@ -291,6 +324,16 @@
     margin: 10px;
   }
   
+  .ganesh-ji-image {
+    width: 100px;
+    height: 100px;
+    padding: 8px;
+  }
+  
+  .ganesh-ji-container {
+    margin-bottom: 15px;
+  }
+  
   .guest-name {
     font-size: 1.8rem;
   }
@@ -333,6 +376,16 @@
   
   .card-container {
     padding: 30px 20px;
+  }
+  
+  .ganesh-ji-image {
+    width: 80px;
+    height: 80px;
+    padding: 6px;
+  }
+  
+  .ganesh-ji-container {
+    margin-bottom: 12px;
   }
   
   .guest-name {

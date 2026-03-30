@@ -16,9 +16,9 @@ import {
   invitationTextVariants,
   venueVariants,
   decorativeBorderVariants,
-  containerVariants
+  containerVariants,
+  ganeshImageVariants
 } from '../../utils/motion/variants';
-import { useOptimizedAnimation } from '../../hooks/useOptimizedAnimation';
 import '../../styles/global.css';
 import '../../styles/invitation.css';
 import '../../styles/countdown.css';
@@ -26,7 +26,6 @@ import '../../styles/countdown.css';
 const AnimatedWeddingCard: React.FC = () => {
   const { guestName } = useParams<{ guestName: string }>();
   const formattedName = formatGuestName(guestName || 'Guest');
-  const { shouldAnimate } = useOptimizedAnimation();
 
   return (
     <>
@@ -43,11 +42,20 @@ const AnimatedWeddingCard: React.FC = () => {
           className="card-container"
           variants={weddingCardVariants}
           whileHover="hover"
-          style={{ 
-            cursor: 'pointer',
-            transform: shouldAnimate ? undefined : 'none'
-          }}
         >
+          {/* Ganesh-Ji Image */}
+          <motion.div 
+            className="ganesh-ji-container"
+            variants={ganeshImageVariants}
+            whileHover="hover"
+          >
+            <img 
+              src="/ganesh-ji.png" 
+              alt="Ganesh Ji" 
+              className="ganesh-ji-image"
+            />
+          </motion.div>
+
           {/* Decorative top border */}
           <motion.div 
             className="decorative-border top"
@@ -80,7 +88,7 @@ const AnimatedWeddingCard: React.FC = () => {
                 className="bride-name"
                 variants={brideNameVariants}
               >
-                Shwetaanjali Kumari
+                Shwetanjali Kumari
               </motion.h1>
               <motion.div 
                 className="bride-parents"
