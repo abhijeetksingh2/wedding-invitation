@@ -126,7 +126,7 @@ const AnimatedWeddingCard: React.FC = () => {
                 className="groom-name"
                 variants={groomNameVariants}
               >
-                Rituraj Dayal
+                Rituraj Dayal Singh
               </motion.h1>
               <motion.div 
                 className="groom-parents"

@@ -10,22 +10,22 @@ interface WeddingEvent {
 const WeddingEvents: React.FC<{ className?: string }> = ({ className = '' }) => {
   const events: WeddingEvent[] = [
     {
-      name: 'Auspicious, Tilak',
+      name: 'Auspicious Tilak',
       date: '17/04/2026',
       day: 'Friday'
     },
     {
-      name: 'Mehndi, Ceremony',
+      name: 'Mehndi Ceremony',
       date: '19/04/2026',
       day: 'Sunday'
     },
     {
-      name: 'Mandap, Haldi',
+      name: 'Mandap and Haldi',
       date: '21/04/2026',
       day: 'Tuesday'
     },
     {
-      name: 'Auspicious, Wedding',
+      name: 'Auspicious Wedding',
       date: '21/04/2026',
       day: 'Tuesday'
     }
