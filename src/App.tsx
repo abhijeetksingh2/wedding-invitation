@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import WeddingCard from './components/WeddingCard';
+import AnimatedWeddingCard from './components/motion/AnimatedWeddingCard';
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<Navigate to="/invite/Guest" replace />} />
-          <Route path="/invite/:guestName" element={<WeddingCard />} />
+          <Route path="/invite/:guestName" element={<AnimatedWeddingCard />} />
         </Routes>
       </div>
     </Router>

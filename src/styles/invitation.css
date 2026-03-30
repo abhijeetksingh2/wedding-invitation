@@ -119,6 +119,33 @@
   transform: scale(1.1) rotate(5deg);
 }
 
+/* Parent names styling */
+.bride-section, .groom-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.bride-parents, .groom-parents {
+  font-family: var(--font-primary);
+  font-size: 0.9rem;
+  color: var(--text-medium);
+  margin-top: 8px;
+  line-height: 1.4;
+  font-style: italic;
+  opacity: 0.9;
+  max-width: 280px;
+}
+
+.bride-parents {
+  text-align: right;
+}
+
+.groom-parents {
+  text-align: left;
+}
+
 /* Invitation text */
 .invitation-text {
   margin: 40px 0;
@@ -280,6 +307,12 @@
     font-size: 2rem;
   }
   
+  .bride-parents, .groom-parents {
+    font-size: 0.8rem;
+    max-width: 240px;
+    margin-top: 6px;
+  }
+  
   .invitation-line {
     font-size: 1.1rem;
   }
@@ -318,6 +351,12 @@
     font-size: 1.7rem;
   }
   
+  .bride-parents, .groom-parents {
+    font-size: 0.7rem;
+    max-width: 200px;
+    margin-top: 5px;
+  }
+  
   .invitation-line {
     font-size: 1rem;
   }
@@ -332,5 +371,146 @@
   
   .venue p {
     font-size: 1.1rem;
+  }
+}
+
+/* Wedding Events Styles */
+.wedding-events {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.events-title {
+  font-family: var(--font-secondary);
+  font-size: 1.8rem;
+  color: var(--gold-accent);
+  margin-bottom: 25px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+}
+
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.event-item {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(244, 229, 194, 0.1) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.event-item:hover {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(244, 229, 194, 0.2) 100%);
+  border-color: var(--gold-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.2);
+}
+
+.event-name {
+  font-family: var(--font-secondary);
+  font-size: 1.2rem;
+  color: var(--text-dark);
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.event-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.event-date {
+  font-family: var(--font-primary);
+  font-size: 1.1rem;
+  color: var(--gold-accent);
+  font-weight: 500;
+}
+
+.event-day {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  color: var(--text-medium);
+  font-style: italic;
+}
+
+.event-divider {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold-accent), transparent);
+}
+
+/* Mobile Responsive for Events */
+@media (max-width: 768px) {
+  .wedding-events {
+    margin: 20px 0;
+  }
+  
+  .events-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .events-list {
+    gap: 15px;
+    max-width: 350px;
+  }
+  
+  .event-item {
+    padding: 15px;
+  }
+  
+  .event-name {
+    font-size: 1.1rem;
+  }
+  
+  .event-details {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+  
+  .event-date {
+    font-size: 1rem;
+  }
+  
+  .event-day {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .events-list {
+    max-width: 300px;
+  }
+  
+  .event-item {
+    padding: 12px;
+  }
+  
+  .event-name {
+    font-size: 1rem;
+  }
+  
+  .event-date {
+    font-size: 0.9rem;
+  }
+  
+  .event-day {
+    font-size: 0.8rem;
   }
 }

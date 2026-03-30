@@ -1,0 +1,98 @@
+/* Motion-specific CSS overrides and enhancements */
+
+/* Magnetic button styles */
+.magnetic-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+/* Floating element styles */
+.floating-element {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Reveal on scroll styles */
+.reveal-on-scroll {
+  will-change: transform, opacity;
+}
+
+/* Staggered container styles */
+.staggered-container > * {
+  will-change: transform, opacity;
+}
+
+/* Pulse animation styles */
+.pulse-animation {
+  transform-origin: center;
+  will-change: transform;
+}
+
+/* Glow on hover styles */
+.glow-on-hover {
+  transition: box-shadow 0.3s ease;
+  border-radius: inherit;
+}
+
+/* Motion particle container */
+.motion-particle-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Motion parallax background */
+.motion-parallax-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Performance optimizations */
+@media (prefers-reduced-motion: reduce) {
+  .magnetic-button,
+  .floating-element,
+  .pulse-animation {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* GPU acceleration for smooth animations */
+.magnetic-button,
+.floating-element,
+.pulse-animation,
+.motion-particle-container > div,
+.motion-parallax-background > div {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .magnetic-button {
+    transform: none !important;
+  }
+  
+  .floating-element {
+    animation-duration: 3s !important;
+  }
+  
+  .pulse-animation {
+    animation-duration: 3s !important;
+  }
+}
