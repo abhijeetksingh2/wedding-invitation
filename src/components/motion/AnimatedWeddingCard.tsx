@@ -187,8 +187,8 @@ const AnimatedWeddingCard: React.FC = () => {
             }}
           >
             <h3>Venue</h3>
-            <p>Pilot Dam near Rohit International</p>
-            <p>Sasaram, Rohtas, Bihar</p>
+            <p>Baba Building 2nd Floor Dham (Pilot Baba), GT Road, Sasaram.</p>
+            <p>Rohtas, Bihar</p>
           </motion.div>
 
           {/* Closing message */}
